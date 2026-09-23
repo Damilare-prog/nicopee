@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nicopee Lab Studio | Premium Photography</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,300&display=swap"></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 :root{--cream:#F5F0E8;--cream-dark:#E8E0D4;--charcoal:#1A1A1A;--charcoal-light:#2A2A2A;--text:#F0EDE8;--text-secondary:#B8B0A4;--text-muted:#7A7268;--border:rgba(255,255,255,0.08);--gold:#C4A86E;--gold-light:#D4B87E}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -21,7 +22,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--charcoal);color:var(--tex
 .anim-d1{animation-delay:.15s}
 .anim-d2{animation-delay:.3s}
 .anim-d3{animation-delay:.45s}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,26,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .3s ease}
+nav{position:fixed;will-change:background-color,padding;top:0;left:0;right:0;z-index:1000;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,26,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .3s ease}
 nav.scrolled{padding:12px 48px;background:rgba(26,26,26,0.95)}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .nav-logo img{height:40px;width:auto;filter:brightness(1.1)}
@@ -74,7 +75,7 @@ nav.scrolled{padding:12px 48px;background:rgba(26,26,26,0.95)}
 .portfolio-tag{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
 .portfolio-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--text);margin-bottom:4px;font-weight:400}
 .portfolio-meta{font-size:.78rem;color:var(--text-muted)}
-.lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);justify-content:center;align-items:center;padding:40px}
+.lightbox{display:none;will-change:opacity;position:fixed;inset:0;z-index:2000;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);justify-content:center;align-items:center;padding:40px}
 .lightbox.active{display:flex;animation:fadeIn .3s ease}
 .lightbox img{max-width:85%;max-height:80vh;object-fit:contain;border-radius:4px}
 .lightbox-close{position:absolute;top:24px;right:32px;color:var(--text-secondary);font-size:1.6rem;cursor:pointer;background:none;border:none;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .3s}
@@ -204,7 +205,7 @@ nav.scrolled{padding:12px 24px}
 </head>
 <body><nav id="navbar">
 <a href="#" class="nav-logo">
-<img src="images/image_01.png" alt="Nicopee Lab Studio">
+<img decoding="async" fetchpriority="high" src="images/image_01.png" alt="Nicopee Lab Studio">
 <div class="nav-brand-text">
 <span class="nav-brand-name">Nicopee Lab</span>
 <span class="nav-brand-sub">Studio</span>
@@ -244,7 +245,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="portfolio-grid">
 <div class="portfolio-item reveal" onclick="openLightbox('images/image_02.jpg','Holiday Glamour','Paris Porch Set')">
-<img src="images/image_02.jpg" alt="Holiday Glamour" loading="lazy">
+<img decoding="async" src="images/image_02.jpg" alt="Holiday Glamour" loading="lazy">
 <div class="portfolio-overlay">
 <span class="portfolio-tag">Holiday</span>
 <h3 class="portfolio-title">Classy Woman</h3>
@@ -252,7 +253,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 </div>
 <div class="portfolio-item reveal" onclick="openLightbox('images/image_03.jpg','Cloud Nine','Cloud Nine Set')">
-<img src="images/image_03.jpg" alt="Cloud Nine Editorial" loading="lazy">
+<img decoding="async" src="images/image_03.jpg" alt="Cloud Nine Editorial" loading="lazy">
 <div class="portfolio-overlay">
 <span class="portfolio-tag">Editorial</span>
 <h3 class="portfolio-title">Dazzling Beauty</h3>
@@ -260,7 +261,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 </div>
 <div class="portfolio-item reveal" onclick="openLightbox('images/image_04.jpg','Paris Porch Elegance','Paris Porch Set')">
-<img src="images/image_04.jpg" alt="Paris Porch Lifestyle" loading="lazy">
+<img decoding="async" src="images/image_04.jpg" alt="Paris Porch Lifestyle" loading="lazy">
 <div class="portfolio-overlay">
 <span class="portfolio-tag">Lifestyle</span>
 <h3 class="portfolio-title">Lady in Essence</h3>
@@ -268,7 +269,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 </div>
 <div class="portfolio-item reveal" onclick="openLightbox('images/image_05.jpg','Merry & Bright','Paris Porch Set')">
-<img src="images/image_05.jpg" alt="Couple Christmas" loading="lazy">
+<img decoding="async" src="images/image_05.jpg" alt="Couple Christmas" loading="lazy">
 <div class="portfolio-overlay">
 <span class="portfolio-tag">Couples</span>
 <h3 class="portfolio-title">Merry & Bright</h3>
@@ -285,7 +286,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row set-paris reveal">
 <div class="set-image">
-<img src="images/image_06.jpg" alt="Paris Porch" loading="lazy">
+<img decoding="async" src="images/image_06.jpg" alt="Paris Porch" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">01 — Paris Porch</p>
@@ -301,7 +302,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row reverse set-lifestyle reveal">
 <div class="set-image">
-<img src="images/image_07.jpg" alt="Lifestyle Loft" loading="lazy">
+<img decoding="async" src="images/image_07.jpg" alt="Lifestyle Loft" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">02 — Lifestyle Loft</p>
@@ -316,7 +317,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 </div><div class="set-row set-maison reveal">
 <div class="set-image">
-<img src="images/image_08.jpg" alt="Leroy Rouge" loading="lazy">
+<img decoding="async" src="images/image_08.jpg" alt="Leroy Rouge" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">03 — Leroy Rouge</p>
@@ -332,7 +333,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row reverse set-candle reveal">
 <div class="set-image">
-<img src="images/image_09.jpg" alt="Candle Cove" loading="lazy">
+<img decoding="async" src="images/image_09.jpg" alt="Candle Cove" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">04 — Candle Cove</p>
@@ -348,7 +349,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row set-cloud reveal">
 <div class="set-image">
-<img src="images/image_10.jpg" alt="Cloud Nine" loading="lazy">
+<img decoding="async" src="images/image_10.jpg" alt="Cloud Nine" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">05 — Cloud Nine</p>
@@ -364,7 +365,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row reverse set-majesty reveal">
 <div class="set-image">
-<img src="images/image_11.jpg" alt="Majesty Lounge" loading="lazy">
+<img decoding="async" src="images/image_11.jpg" alt="Majesty Lounge" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">06 — Majesty Lounge</p>
@@ -379,7 +380,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 </div><div class="set-row set-canvas reveal">
 <div class="set-image">
-<img src="images/image_12.jpg" alt="Canvas Royale" loading="lazy">
+<img decoding="async" src="images/image_12.jpg" alt="Canvas Royale" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">07 — Canvas Royale</p>
@@ -395,7 +396,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row reverse set-twin reveal">
 <div class="set-image">
-<img src="images/image_13.jpg" alt="Twin Arch" loading="lazy">
+<img decoding="async" src="images/image_13.jpg" alt="Twin Arch" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">08 — Twin Arch</p>
@@ -411,7 +412,7 @@ nav.scrolled{padding:12px 24px}
 </div>
 <div class="set-row set-olive reveal">
 <div class="set-image">
-<img src="images/image_14.jpg" alt="Olive Escape" loading="lazy">
+<img decoding="async" src="images/image_14.jpg" alt="Olive Escape" loading="lazy">
 </div>
 <div class="set-content">
 <p class="set-number">09 — Olive Escape</p>
@@ -525,7 +526,7 @@ nav.scrolled{padding:12px 24px}
 <option value="Full Day - ₦700,000">Full Day — ₦700,000</option>
 <option value="Paris Porch - ₦50,000/hr">Paris Porch — ₦50,000/hr</option>
 <option value="Lifestyle Loft - ₦50,000/hr">Lifestyle Loft — ₦50,000/hr</option>
-<option value="Maison Rouge - ₦45,000/hr">Leroy Rouge — ₦45,000/hr</option>
+<option value="Leroy Rouge - ₦45,000/hr">Leroy Rouge — ₦45,000/hr</option>
 <option value="Candle Cove - ₦40,000/hr">Candle Cove — ₦40,000/hr</option>
 <option value="Cloud Nine - ₦35,000/hr">Cloud Nine — ₦35,000/hr</option>
 <option value="Majesty Lounge - ₦40,000/hr">Majesty Lounge — ₦40,000/hr</option>
@@ -558,7 +559,7 @@ nav.scrolled{padding:12px 24px}
 
 <footer>
 <div class="footer-logo">
-<img src="images/image_15.png" alt="Nicopee Lab Studio">
+<img decoding="async" src="images/image_15.png" alt="Nicopee Lab Studio">
 <div class="footer-brand-name">Nicopee Lab</div>
 <div class="footer-brand-sub">Studio</div>
 </div>
@@ -596,7 +597,7 @@ Book Now
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
 <button class="lightbox-close">×</button>
-<img id="lightbox-img" src="" alt="">
+<img decoding="async" id="lightbox-img" src="" alt="">
 <div class="lightbox-caption">
 <p class="title" id="lightbox-title"></p>
 <p class="meta" id="lightbox-meta"></p>
